@@ -1,0 +1,68 @@
+.container-fluid {
+  padding-left: 3%;
+}
+.sign-in {
+  margin: 0px 0px 0px 60%;
+  background-color: #ffde2e;
+  border-radius: 10px;
+  padding: 0px 10px;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  width: 100px;
+}
+.sign-in:hover {
+  background-color: #ffed8a;
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .container-fluid {
+    padding-left: 20px;
+  }
+  .list {
+    margin: 10px 0px 0px 55px;
+  }
+  .sign-in {
+    margin: 0;
+    background-color: inherit;
+    border-radius: 10px;
+    padding: 0px 10px;
+    font-weight: inherit;
+    font-size: 16px;
+    text-align: center;
+    width: 80px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .sign-in {
+    margin: 0px 0px 0px 110px;
+    font-weight: inherit;
+  }
+  .navbar-brand {
+    margin: 40px 0px 0px 15px !important;
+  }
+}
+//media for tablet
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  .list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 0px 0px 55px;
+
+    .nav-item {
+      margin: 0px 20px 0px 0px;
+    }
+  }
+  .sign-in {
+    margin: 0;
+    background-color: ffde2e;
+    border-radius: 10px;
+    padding: 0px 10px;
+    font-weight: inherit;
+    font-size: 16px;
+    text-align: center;
+    width: 80px;
+  }
+}
