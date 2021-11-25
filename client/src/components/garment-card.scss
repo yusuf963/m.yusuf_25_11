@@ -27,6 +27,13 @@
   // margin-bottom: 3.5rem;
 }
 
+.dropdown {
+  border-radius: 5px;
+  padding: 2px 15px;
+  margin: 20px 0px 20px 40px;
+  width: 400px;
+}
+
 .collection-item {
   width: 22%;
   display: flex;
@@ -65,11 +72,14 @@
   }
 }
 .container {
-  max-width: 100vw;
+  max-width: 80vw;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
 }
 @media only screen and (max-width: 600px) {
   .container {
+    max-width: 100vw;
     background-color: black;
     display: flex;
     flex-direction: column;
@@ -81,7 +91,7 @@
       justify-content: center;
       font-size: 26px;
       color: white;
-      margin: 140px 0px 0px 0px;
+      margin: 180px 0px 0px 0px;
     }
     .subtitle {
       font-weight: lighter;
@@ -91,6 +101,13 @@
       font-size: 14px;
       margin-bottom: 0%;
     }
+  }
+  .dropdown {
+    padding: 5px 10px;
+    // margin: 20px 0px 20px 40px;
+
+    margin: 10px 0px 0px 0px;
+    width: 70%;
   }
   .preview {
     margin-top: 30px;

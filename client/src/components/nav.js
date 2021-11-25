@@ -28,12 +28,7 @@ const Nav = () => {
         </ul>
         <ul className='sign-in navbar-nav me-auto mb-2 mb-lg-0'>
           <li className='nav-item'>
-            <a
-              // style={{ color: 'black' }}
-              className='nav-link active'
-              aria-current='page'
-              href='/garments'
-            >
+            <a className='nav-link active' aria-current='page' href='/garments'>
               Sign In
             </a>
           </li>
