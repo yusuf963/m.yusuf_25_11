@@ -8,7 +8,7 @@ route.get('/api/v1/garments', async (req, res) => {
   // redisUrl = 'redis://127.0.0.1:6379';
   // const client = redis.createClient(redisUrl);
   // const util = require('util');
-  //can be used to flush the redis cache at any time to clear the cache and start fresh
+  // can be used to flush the redis cache at any time to clear the cache and start fresh
   // client.flushall();
   // client.get = util.promisify(client.get);
   // const cacheGarments = await client.get('/api/v1/garments');
@@ -16,7 +16,7 @@ route.get('/api/v1/garments', async (req, res) => {
   //   console.log('cache hit');
   //   return res.send(JSON.parse(cacheGarments));
   // }
-  // console.log('cache miss');
+  console.log('cache miss');
   const page = parseInt(req.query.page);
   const limit = parseInt(req.query.limit);
   const offset = (page - 1) * limit;
@@ -39,7 +39,7 @@ route.get('/api/v1/garments', async (req, res) => {
       page: page,
       limit: limit,
     };
-    res.send(responsei);
+    res.send(response);
     // client.set('/api/v1/garments', JSON.stringify(response));
   } catch (error) {
     res.status(500).json({

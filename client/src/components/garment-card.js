@@ -11,6 +11,7 @@ const GarmentCard = () => {
   const [garments, setGarment] = useState([]);
   const [category, setCategory] = useState('');
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
   const [pageCount, setpageCount] = useState(0);
 
   let limit = 16;
@@ -22,13 +23,13 @@ const GarmentCard = () => {
           : `http://localhost:5000/api/v1/garments?page=1&limit=${limit}`
       );
       const data = await res.json();
-      console.log(data);
       setpageCount(Math.ceil(data.total / limit));
-      setGarment(data.garments);
-      if (data.data === true) {
-        setLoading(false);
+      if (data.err === true) {
+        setGarment(data.garments);
+        setError(true);
       } else {
         setLoading(true);
+        setGarment(data.garments);
       }
     };
     getGarments();
@@ -121,7 +122,10 @@ const GarmentCard = () => {
               </div>
             ))
         ) : (
-          <LoaderIcon />
+          <>
+            <LoaderIcon />
+            {error && <p>We are working on your request ✨</p>}
+          </>
         )}
       </div>
       <ReactPaginate
