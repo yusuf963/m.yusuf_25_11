@@ -18,6 +18,8 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
+
+// dev enviroments
 app.use('/', (req, res) => {
   res.status(200).send('server is running');
 });
