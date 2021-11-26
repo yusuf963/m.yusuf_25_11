@@ -1,15 +1,12 @@
 const mongoose = require('mongoose');
-
+require('dotenv').config();
 const connectToDb = () => {};
 mongoose
-  .connect(
-    'mongodb+srv://yusuf:goldisston@cluster0.oeg40.mongodb.net/intelistyle?retryWrites=true&w=majority',
-    {
-      useUnifiedTopology: true,
-      useNewUrlParser: true,
-      dbName: 'intelistyle',
-    }
-  )
+  .connect(process.env.DB_CONNECTION_STRING, {
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+    dbName: 'intelistyle',
+  })
   .then(() => {
     console.log('Connected to DB');
   })
