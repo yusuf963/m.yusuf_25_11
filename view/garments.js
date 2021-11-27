@@ -16,7 +16,7 @@ route.get('/api/v1/garments', async (req, res) => {
   //   console.log('cache hit');
   //   return res.send(JSON.parse(cacheGarments));
   // }
-  console.log('cache miss');
+  // console.log('cache miss');
   const page = parseInt(req.query.page);
   const limit = parseInt(req.query.limit);
   const offset = (page - 1) * limit;
@@ -56,7 +56,6 @@ route.get('/api/v1/garments/:product_categories', async (req, res) => {
   const limit = parseInt(req.query.limit);
   const product_categories = req.params.product_categories;
   console.log(product_categories);
-  console.log('category hit');
 
   const offset = (page - 1) * limit;
   const query = {
