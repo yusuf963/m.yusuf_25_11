@@ -19,8 +19,8 @@ const GarmentCard = () => {
     const getGarments = async () => {
       const res = await fetch(
         category
-          ? `http://localhost:5000/api/v1/garments/${category}?page=1&limit=${limit}`
-          : `http://localhost:5000/api/v1/garments?page=1&limit=${limit}`
+          ? `/api/v1/garments/${category}?page=1&limit=${limit}`
+          : `/api/v1/garments?page=1&limit=${limit}`
       );
       const data = await res.json();
       setpageCount(Math.ceil(data.total / limit));
@@ -37,8 +37,8 @@ const GarmentCard = () => {
   const getGarments = async (currentPage) => {
     const res = await fetch(
       category
-        ? `http://localhost:5000/api/v1/garments/${category}?page=${currentPage}&limit=${limit}`
-        : `http://localhost:5000/api/v1/garments?page=${currentPage}&limit=${limit}`
+        ? `/api/v1/garments/${category}?page=${currentPage}&limit=${limit}`
+        : `/api/v1/garments?page=${currentPage}&limit=${limit}`
     );
     const data = await res.json();
     setGarment(data.garments);
