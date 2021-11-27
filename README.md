@@ -3,19 +3,22 @@
 The solution:
 The website should load garments from a MongoDB database. You can load data into your
 database from the [MongoDB Atlas](https://www.mongodb.com/cloud/atlas).
+and see the Redis section in this file for more information.
+
 # the used Tech stack.
+
 ReactJs Node.js, Express, MongoDB, Mongoose, Bootstrap Html, Sass and Puppeteer & jest for testing.
 
 attempt to use the following technologies:
 Redis for caching
+ - [Redis](https://redis.io/) and see the Redis section in this file for more information.
 
 ---
 
 ## Requirements
 
 For development, you will only need Node.js and a node global package, npm, installed in your environement.
-
-### Node
+node -v >= 14.6.0 && npm -v >= 8.1.4
 
 - #### Node installation on Windows
 
@@ -38,87 +41,60 @@ If the installation was successful, you should be able to run the following comm
     v14.16.0
 
     $ npm --version
-    6.14.11
+    8.1.4
 
 If you need to update `npm`, you can make it using `npm`! After running the following command, just open again the command line and be happy.
 
     $ npm install npm -g
 
-###
-
 ## Clon the repository
 
-    $ git clone https://github.com/YOUR_USERNAME/PROJECT_TITL
-    then `cd PROJECT_TITLE`
-##  connect to mongo_atlas the database
-visit https://cloud.mongodb.com/ and create a new database
+    $ git clone https://github.com/yusuf963/m.yusuf_25_11.git
+    then `m.yusuf_25_11`
 
+## connect to mongo_atlas the database
+
+visit https://cloud.mongodb.com/ and create a new database
 
 ## Install the dependencies and run the App.
 
 open the project in your editor and run the following command.
+in the root of the project folder, run the following command.
+`cp .env.example .env`
+`$ npm install`
+add yout MONOG DB connection string to the .env file
+the cd to cline and run the following command.
+`$ npm install`
 
+## Run the App
+you can run the two apps in one command concurently
+in your root folder run the following command.
+`npm run dev`
+
+## Or run individually
+open the project in your editor and run the following command.
 `cd clinet`
-`npm install`
-once the installation is done, you should be able to run the following command.
-
 `$ npm run start`
 React will be running on port 3000.
 localhost:3000/
-open a new terminal tab then navigate back to the project root folderr and run the following command.
 
-`cd server`
-`npm install`
-`cp .env.example .env`
-add your mongo_atlas credentials in the .env file
-once the installation is done and you finished configuring .env file, you should be able to run the following command.
+open a new terminal tab then navigate back to the project root folderr and run the following command.
 `$ npm run serve`
-Node App will be running on port 5000.
+Server will be running on port 5000.
 localhost:5000/
 
 ## Run the tests
+## jest & puppeteer
+
 this test using puppeteer and Jest. for automated headless testing.
-for the automated tests, you can run the following command.(make react and node app are running & you are in the server folder)
+for the automated tests, you can run the following command.(make sure react and node app are running & you are in the server folder)
 `$ npm run test `
 
-## Simple build for production
-
-    $ yarn build
-Database Deployments new cluster on atlas mongo DB 1-3 minutes
-
-challenges:
-
-- had a problem with mongo command line so I had ro srearch and download some excutable files (light size) to help me connect to my atlas DB in the cloud via CLI  
-  refrence: https://stackoverflow.com/questions/31055637/getting-mongoimport-is-not-recognized-as-an-internal-or-external-command-ope
-
-run the server
-npm run serve
-React
-run client
-npm run start
-
-Create React App is a comfortable environment for learning React, and is the best way to start building a new single-page application in React.
-
+## challenges & usefusll commands:
 usefull command
-rm -rf .git ## delete git from the folder e.g client
+`rm -rf .git ## delete git from the folder e.g client`
 
-Task:
-Your task is to build a (single page) website that I can search for a garment (e.g. black hat) and
-it should display the garments that match the search criteria.
 
-## I studied the data I have
-
-## what is the match criteria?
-
-## the records are duplocated as the id of the item did,'t work as a unique keys
-
-## challengers, react router dome upgrad and downgrade
-
-## while trying to powerup the component
-
-#
-
-## in this project I used the following technologies:
 
 ## install Redis on Mac
 
@@ -160,38 +136,3 @@ redis-cli ping
 3.Unzip the file
 4.In the newly created folder, run mongod.exe
 5.You should see a window appear that says mongod is running on port 27017.
-
-## jest & puppeteer
-
-The solution:
-The website should load garments from a MongoDB database. You can load data into your
-database from this file:
-https://stylr-ai-engine-srv-data.s3.eu-west-1.amazonaws.com//srv/data/new_scrapes/shopstyle-168
-9-men-18-03-2019/garment_items.jl
-You have the freedom to use any build toolchain or helper libraries necessary, but you must
-stick to our core technologies of ReactJS for the frontend and NodeJS or Python for the
-backend.
-As part of the deliverable, there should be automated tests for all the possible use cases of the
-task.
-Success Criteria:
-
-- Application architecture and framework best practices for the framework in use are
-  followed and understood.
-- Code is formatted well and easy to follow. Variable and function names make sense
-- Application gracefully handles database error cases and is resistant to unexpected
-  messages.
-- Database queries are optimised for performance
-- You will be evaluated on the use of design patterns.
-- Test coverage of the web page is sufficient and thought has been put into
-  what areas of the application should and shouldn’t be tested.
-  Bonus Points (optional):
-- Design an infrastructure architecture diagram that can be used to scale the website to
-  thousands of searches per second
-
-Submission Requirements:
-
-- Send an email to your recruiter with a link to a public git repository (in
-  GitHub/BitBucket/GitLab, etc) with the name [firstname]-[submission date].
-- Provide a link to a hosted version of the project
-- You will be asked to screen share and walk through this app & code in your next
-  interview, please have it ready to be run prior to the interview.
