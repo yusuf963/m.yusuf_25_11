@@ -5,9 +5,9 @@ import './homePage.scss';
 // HomePage component
 const HomePage = () => (
   <div className='homepage'>
-    <h3 className='brand-logoo'>
+    <h3 className='home-brand-logo'>
       InteliStyle
-      <p className='subtitlee'>Lead tech-co in Fastion Industery</p>
+      <p className='home-subtitle'>Lead tech-co in Fashion Industery</p>
     </h3>
     <Directory />
   </div>
